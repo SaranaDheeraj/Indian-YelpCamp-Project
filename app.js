@@ -43,7 +43,7 @@ app.use(mongoSanitize());
 app.use(helmet({contentSecurityPolicy: false}));
 
 const store = new MongoDBStore({
-  url:"mongodb://127.0.0.1:27017/yelp-camp",
+  url:dbUrl,
   secret: 'thisshouldbeabettersecret!',
   touchAfter: 24*60*60,
 });
